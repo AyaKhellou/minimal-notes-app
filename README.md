@@ -1,16 +1,52 @@
-# React + Vite
+# 📝 Minimal Notes App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and clean notes app built with React, focused on core functionality and a distraction-free experience.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Add new notes
+* Edit existing notes
+* Delete notes
+* Data persistence using localStorage
+* Clean and minimal UI
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React (Functional Components & Hooks)
+* CSS (Custom styling)
+* Vite
+* localStorage API
 
-## Expanding the ESLint configuration
+## 🎯 Purpose
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project was built to practice React fundamentals while improving UI design skills.
+
+The focus was on:
+
+* Managing state effectively
+* Structuring components clearly
+* Persisting data on the client side
+* Designing a minimal and usable interface
+
+## 🎨 Design
+
+The UI uses a muted olive color palette with a minimal layout to create a calm and focused writing experience.
+
+Typography: Inter + Playfair Display
+
+## 📸 Preview
+
+![alt text](image.png)
+
+## 🚧 Challenges
+
+* Managing form behavior (handling Enter key submission correctly)
+* Switching between add and edit modes
+* Syncing state with localStorage
+* Improving UI without overcomplicating the design
+
+## 📈 What I Learned
+
+* How to manage and persist state using localStorage
+* Better understanding of React state and props
+* Importance of UI consistency and spacing
