@@ -1,4 +1,5 @@
 
+/* CSS Variables for consistent theming */
 :root {
   --bg: #f8f9f7;
   --card: #fff;
@@ -6,11 +7,14 @@
   --accent-light: #f0f2ea;
   --accent-hover: #55663e;
 }
-*{
+
+/* Global Reset and Base Styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Inter', sans-serif;
 }
@@ -18,17 +22,21 @@ body {
 h1, h2 {
   font-family: 'Playfair Display', serif;
 }
-body{
+
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg);
   color: #1a1a1a;
   line-height: 1.5;
 }
-input, textarea { 
+
+input, textarea {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #1a1a1a;
   line-height: 1.5;
 }
+
+/* Typography Styles */
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
@@ -42,7 +50,9 @@ h2 {
   font-size: 20px;
   letter-spacing: -0.3px;
 }
-.app .title{
+
+/* App Layout Styles */
+.app .title {
   font-size: 30px;
   font-weight: 600;
   color: #211103;
@@ -51,33 +61,21 @@ h2 {
   gap: 10px;
   justify-content: center;
 }
-.container{
+
+.container {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
   padding: 20px;
 }
-@media(max-width: 768px){
-  .container{
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 769px) {
-  .app .title {
-    font-size: 24px;
-  }
-}
-@media (max-width: 480px) {
-  .container {
-    padding: 10px;
-  }
-}
-.title{
+
+.title {
   margin: 15px auto;
   text-align: center;
 }
-/* RECENT ENTRIES */
-.recent-entries{
+
+/* Recent Entries Section */
+.recent-entries {
   background-color: var(--card);
   padding: 20px;
   border-radius: 16px;
@@ -87,15 +85,13 @@ h2 {
   scrollbar-color: var(--accent-light) var(--card);
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
-@media (max-width: 769px) {
-  .recent-entries {
-    order: 1;
-  }
-}
+
 .recent-entries::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
-.entry{
+
+/* Individual Entry Styles */
+.entry {
   width: 95%;
   position: relative;
   overflow: hidden;
@@ -106,7 +102,7 @@ h2 {
   background-color: var(--bg);
 }
 
-.entry .head{
+.entry .head {
   background-color: var(--accent-light);
   padding: 10px;
   display: flex;
@@ -115,68 +111,79 @@ h2 {
   padding-bottom: 10px;
 }
 
-.entry .head .date{
+.entry .head .date {
   font-size: 12px;
   color: #888;
 }
-.entry .buttons{
+
+.entry .buttons {
   display: flex;
   flex-direction: row-reverse;
   gap: 5px;
 }
-.entry .buttons button{
+
+.entry .buttons button {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.entry .buttons .icon{
+
+.entry .buttons .icon {
   color: #555;
   width: 17px;
   height: 17px;
   transition: all 0.3s ease;
 }
-.entry .buttons button.delete:hover .icon{
+
+.entry .buttons button.delete:hover .icon {
   color: rgb(223, 103, 103);
   transform: scale(1.1);
 }
-.entry .buttons button.edit:hover .icon{
+
+.entry .buttons button.edit:hover .icon {
   color: rgb(108, 166, 134);
   transform: scale(1.1);
-
 }
+
 .entry .body {
   padding: 10px;
 }
-.entry .body h3{
+
+.entry .body h3 {
   font-weight: 600;
   font-size: 18px;
   padding-bottom: 10px;
 }
-.entry .body p{
+
+.entry .body p {
   white-space: pre-line;
   line-height: 1.6;
   font-size: 15px;
   color: #333;
   padding: 10px;
 }
-/* New ENtry */
-.new-entry{
+
+/* New Entry Section */
+.new-entry {
   background-color: var(--card);
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
-.new-entry .date{
+
+.new-entry .date {
   font-size: 12px;
   color: #888;
   margin-bottom: 10px;
 }
-.new-entry form{
+
+.new-entry form {
   margin-block: 20px;
   display: flex;
   flex-direction: column;
 }
-form{
+
+form {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -190,25 +197,30 @@ input, textarea {
   font-size: 14px;
   transition: all 0.2s ease;
 }
-input{
+
+input {
   font-weight: 600;
   font-size: 18px;
 }
+
 textarea {
   resize: none;
   min-height: 180px;
   line-height: 1.6;
 }
+
 ::placeholder {
   color: #aaa;
   font-size: 14px;
 }
+
 input:focus, textarea:focus {
   background: var(--accent-light);
   box-shadow: 0 0 0 2px #dfe5d6;
   outline: none;
 }
-.new-entry button{
+
+.new-entry button {
   background: var(--accent);
   color: white;
   border: none;
@@ -221,13 +233,37 @@ input:focus, textarea:focus {
   transition: all 0.2s ease;
   cursor: pointer;
 }
-.new-entry button:hover{
+
+.new-entry button:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 14px #91ab666b;
 }
-hr{
+
+hr {
   border: none;
   height: 1px;
   background: var(--accent-light);
   margin: 8px 0;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 769px) {
+  .app .title {
+    font-size: 24px;
+  }
+  .recent-entries {
+    order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
 }
